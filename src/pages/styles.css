@@ -1,0 +1,114 @@
+body {
+  background-color: #191622;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerMain{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem
+}
+
+.title {
+  font-size: 2.3rem;
+  color: #c0d4df;
+  text-align: center;
+  border: 0.2rem solid #fafafa;
+  padding: 1rem;
+  border-radius: 3rem;
+  width: fit-content;
+}
+
+.container {
+  height: 70vh;
+  width: 70vw;
+  border-radius: 1.6rem;
+  background-color: #13111b;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #000;
+  border-radius: 8px;
+  border: 0;
+  padding: 32px 48px;
+  font-size: 2rem;
+  color: #c0d4df;
+  cursor: pointer;
+}
+
+.container select:focus-within {
+  border: 0.2rem solid #fafafa;
+}
+
+@media screen and (max-width: 768px) {
+
+  .containerMain{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem
+  }
+
+  .title{
+    font-size: 1.5rem;
+    margin-top: 1rem; 
+  }
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 50vh;
+    width: 50vw;
+  }
+}
+
+@media  screen and (max-width: 412px) {
+  
+    .containerMain{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem
+    }
+  
+    .title{
+      font-size: 1.5rem;
+      margin-top: 1rem; 
+    }
+  
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+      height: 80vh;
+      width: 80vw;
+    }
+  
+}
+
+  
