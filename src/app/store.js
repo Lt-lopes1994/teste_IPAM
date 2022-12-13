@@ -1,8 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import estadoReducer, { estadosFetch } from '../redux/slices/estadoSlice';
+import cityReducer from '../redux/slices/citySlice';
+import infoReducer from '../redux/slices/infoSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer
+    estados: estadoReducer,
+    cidades: cityReducer,
+    info: infoReducer
   }
 });
+
+store.dispatch(estadosFetch());

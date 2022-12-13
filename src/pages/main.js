@@ -10,28 +10,32 @@ function Main() {
   const [selectedUf, setSelectedUf] = useState('0');
   const [selectedCity, setSelectedCity] = useState('0');
 
-  useEffect(() => {
-    if (selectedUf === '0') {
-      return;
-    }
-    api.get(`/estados/${selectedUf}/municipios`).then((response) => {
-      setCities(response.data);
-    });
-  });
-
+  //seleciona a UF
   useEffect(() => {
     api.get('/estados').then((response) => {
       setUfs(response.data);
     });
   }, [selectedUf]);
 
+  //seleciona a cidade
+  useEffect(() => {
+    if (selectedUf === '0') {
+      return;
+    }
+    api.get(`/estados/${selectedUf}/municipios`).then((response) => {
+      setCities(response.data);
+      console.log(`info da cidade:`, cities);
+    });
+  }, [selectedUf]);
+
+  //traz os dados da cidade
   useEffect(() => {
     if (selectedCity === '0') {
       return;
     }
 
     api.get(`/municipios/${selectedCity}`).then((response) => {
-      console.log(response.data);
+      console.log(`info do municipio:`, response.data);
     });
   }, [selectedCity]);
 
@@ -42,6 +46,7 @@ function Main() {
 
   function handleSelectCity(event) {
     const city = event.target.value;
+    console.log('cidade:', city);
     setSelectedCity(city);
   }
 
@@ -70,7 +75,7 @@ function Main() {
           {cities.map((city) => (
             <option onClick={handleCityID} key={city.id} value={city.nome}>
               {city.nome}
-              {console.log(city.id)}
+              {console.log('Id cidade:', city.id)}
             </option>
           ))}
         </select>
