@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export default axios.create({
-	baseURL: 'https://servicodados.ibge.gov.br/api/v1/localidades',
-	timeout: 1000,
+  baseURL: 'https://servicodados.ibge.gov.br/api/v1/localidades',
+  timeout: 1000
 });
