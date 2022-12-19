@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'https://servicodados.ibge.gov.br/api/v1/localidades',
+  baseURL: process.env.REACT_APP_BASE_URL,
   timeout: 1000
 });
