@@ -1,6 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+
 import '../styles/cityInfoDisplayStyles.css';
 
 export default function CityInfoDisplay() {
@@ -14,7 +16,7 @@ export default function CityInfoDisplay() {
       setSelectedCity({
         Município: {
           id: cityInfo.id,
-          nome: `Município: ${cityInfo.nome}`,
+          nome: `Nome do município: ${cityInfo.nome}`,
           info1: `Região imediata: ${cityInfo.municipio['regiao-imediata'].nome}`,
           info2: `UF: ${cityInfo.municipio['regiao-imediata']['regiao-intermediaria'].UF.nome} (${cityInfo.municipio['regiao-imediata']['regiao-intermediaria'].UF.sigla})`
         },

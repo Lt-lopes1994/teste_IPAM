@@ -1,0 +1,58 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 10rem;
+  padding: 0 2rem;
+  background-color: #064414;
+}
+
+.containerImg {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c7bbbb;
+  border-radius: 1rem;
+  border: solid 0.1rem #000;
+}
+
+.containerImg img {
+  width: 7rem;
+  height: 7rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  border: solid 0.1rem #c0abab;
+}
+
+.containerImg:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.projectName {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #b3aeae;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 20rem;
+  height: 100%;
+  gap: 1rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: #b3aeae;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: 0.5s;
+}
