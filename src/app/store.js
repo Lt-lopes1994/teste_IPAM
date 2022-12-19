@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
-import estadoReducer, { estadosFetch } from '../redux/slices/estadoSlice';
-import cityReducer from '../redux/slices/citySlice';
-import infoReducer from '../redux/slices/infoSlice';
+import CityInfoReducer from '../features/slices/cityInfoSlice';
+import cityReducer from '../features/slices/citySlice';
+import ufReducer, { estadosFetch } from '../features/slices/ufSlice';
 
 export const store = configureStore({
   reducer: {
-    estados: estadoReducer,
+    estados: ufReducer,
     cidades: cityReducer,
-    info: infoReducer
+    info: CityInfoReducer
   }
 });
 
