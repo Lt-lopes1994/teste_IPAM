@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const estadosFetch = createAsyncThunk('estados/estadosfetch', async () => {
-  const response = await api.get('/estados');
+  const response = await api.get('/estados?orderBy=nome');
   return response.data;
 });
 
